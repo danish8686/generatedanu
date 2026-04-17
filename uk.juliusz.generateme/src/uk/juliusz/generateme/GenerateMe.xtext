@@ -1,0 +1,73 @@
+grammar uk.juliusz.generateme.GenerateMe with org.eclipse.xtext.common.Terminals
+
+generate generateMe "http://www.juliusz.uk/generateme/GenerateMe"
+
+
+
+
+GenerateMeProgram:
+	config = Config
+	homePage = HomePage
+	pages += Pages*
+;
+
+Config:
+	'BusinessName' businessName=STRING
+;
+
+
+HomePage:
+	'HomePage{'
+		'PageHeader' content=STRING
+		'Introduction'Introduction=STRING
+	'}'
+;
+
+Pages:
+	ContentPage |
+	GalleryPage |
+	ContactPage
+	
+;
+
+
+ContentPage:
+	
+	'ContentPage' name=ID '{'
+		'PageHeader' header=STRING
+		 section+=Section*	
+	'}'
+;
+
+Section:	
+		'Section' name=ID '{'
+		'Title' title=STRING
+		'Content' content=STRING
+	'}'
+;
+
+ContactPage:
+	'ContactPage' name=ID '{'
+	'PageHeader' header=STRING
+	'SendFrom' from=STRING
+	'SendTo' to=STRING
+	'}'
+;
+
+
+GalleryPage:
+	'GalleryPage' name=ID '{'
+		photos+=Photo*		
+	'}'
+;
+
+Photo:	
+	'Photo' name=ID '{'
+		'PhotoDescription' description=STRING
+		'PhotoFileName' fileName=STRING
+	'}'
+;
+
+
+
+
