@@ -1,0 +1,97 @@
+BusinessName 'Memorable Photography'
+
+
+HomePage{
+PageHeader 'Welcome to Memorable Photography!'
+Introduction 'Etiam scelerisque magna non sollicitudin consequat. Donec sagittis magna nec egestas ultrices. Etiam interdum tincidunt sapien et sodales. Nam et nibh nec ex porta ornare sed ac ipsum. Sed maximus luctus erat, ut auctor sem scelerisque ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nulla erat, faucibus nec malesuada eu, tristique ut lacus. Maecenas dapibus vulputate orci id interdum. Sed dapibus, leo in finibus condimentum, tortor neque rutrum odio, a sodales ante tortor id purus. Mauris purus erat, rutrum at massa sit amet, blandit egestas erat. Sed egestas magna ipsum, sed imperdiet ligula pharetra in. Donec iaculis risus quis metus condimentum accumsan. Sed porttitor, eros vitae ultricies mattis, quam eros pellentesque quam, nec pulvinar purus nunc ut est. Phasellus interdum at mi pellentesque euismod. Pellentesque et auctor neque. Aliquam non sapien nisi.'
+}
+
+	
+ContentPage About{
+	PageHeader 'About us'
+	Section Section1{
+		Title 'Where do we come from?'
+		Content'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie mauris id purus tincidunt iaculis. Etiam convallis sodales vehicula. Praesent elementum tristique ligula, quis rutrum arcu congue id. Proin vulputate mattis tristique. Nam tempus felis elementum malesuada posuere. Vivamus maximus molestie lectus nec luctus. Nullam quis semper sem. Suspendisse egestas facilisis ante id volutpat. Integer laoreet sapien neque, at egestas risus eleifend at. Maecenas placerat, arcu non faucibus maximus, arcu diam facilisis elit, in dictum nisl nunc ut dolor. Morbi sit amet bibendum ex, et pellentesque enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+	}
+	Section Section2{
+		Title 'What do we do?'
+		Content 'Sed vehicula rhoncus gravida. Cras consectetur, neque pharetra pretium blandit, ante massa venenatis magna, in fringilla ante magna ornare enim. Quisque nec nunc nec ante pellentesque eleifend nec eget est. Etiam ut euismod risus, vitae facilisis lectus. Donec massa justo, tempus sed ipsum eget, luctus scelerisque urna. Aliquam fermentum commodo enim sed eleifend. Nam a nulla non magna ultrices ultricies. Nullam sit amet molestie mauris. Vestibulum mattis malesuada consequat. Mauris enim elit, tincidunt eget felis ut, ultricies fringilla est.'
+	}
+	Section Section3{
+		Title 'How can we help you?'
+		Content 'Nullam porta bibendum nunc, id pretium sem blandit nec. Integer luctus, lectus id rhoncus pharetra, arcu risus posuere nisl, a consequat quam justo et libero. Praesent id turpis scelerisque tortor tincidunt ultricies. Proin ornare lacinia sem non gravida. Donec facilisis dignissim mauris, eget lobortis lorem imperdiet eu. Sed nec nibh massa. Duis porttitor porta semper. Quisque ac blandit orci. Donec gravida consectetur odio. Morbi eu leo eget nibh egestas tristique. Donec euismod et elit a tincidunt. Vestibulum in iaculis dui. Cras nec nisl leo. Etiam enim sem, volutpat eu vulputate a, elementum faucibus enim. In ut justo nec eros feugiat suscipit. Sed volutpat laoreet placerat.'
+	}
+	}
+	
+ContentPage Prices{
+	PageHeader 'Prices'
+	Section Prices1{
+		Title 'Current price list per session in pounds:'
+		Content '
+Portrait photography: 120 <br>
+Portfolio photography: 100 <br>
+Modelling photography: 150 <br>
+Lifestyle photography: 110 <br>
+Glamour photography: 80 <br>
+Product photography: 60 <br>
+Architecture photography: 60 <br>
+'
+	}
+	}
+	
+	
+GalleryPage Food{
+	Photo Sandwich{
+		PhotoDescription 'This is a photo of a sandwich!'
+		PhotoFileName 'sandwich.jpg'
+	}
+	
+	Photo Banana{
+		PhotoDescription 'This is a photo of a banana'
+		PhotoFileName 'banana.jpg'
+	}
+	
+	Photo Coffee{
+		PhotoDescription 'This is a photo of a cup of coffee'
+		PhotoFileName 'coffee.jpg'
+	}
+}
+
+GalleryPage Nature{
+	Photo Flowers{
+		PhotoDescription 'This is a photo of flowers'
+		PhotoFileName 'flowers.jpg'
+	}
+	
+	
+	Photo Forest{
+		PhotoDescription 'This is a photo of a forest.'
+		PhotoFileName 'forest.jpg'
+	}
+	
+	Photo Reindeer{
+		PhotoDescription 'This is a photo of a reindeer (I think, that is not my area of expertise!'
+		PhotoFileName 'animal.jpg'
+	}
+}
+
+GalleryPage Buildings{
+	Photo Building{
+		PhotoDescription 'This is a photo of a building.'
+		PhotoFileName 'building.jpg'
+	}
+	
+	Photo Tower{
+		PhotoDescription 'This is a photo of a tower.  '
+		PhotoFileName 'tower.jpg'
+	}
+	
+}
+
+ContactPage Contact{
+	PageHeader 'Send us an e-mail!'
+	SendFrom 'hello@juliusz.uk'
+	SendTo 'julek175j@gmail.com'
+	}
+	
+

@@ -1,0 +1,573 @@
+/* XPECT_SETUP uk.juliusz.generateme.xpect.XPectTests END_SETUP */
+
+/*
+  XPECT generated ---
+    
+    -- DEFAULT_OUTPUTaboutus.php --
+  <?php
+  include('header.php');
+  ?>
+  
+  
+  <div class="row"><br><br><br><br><br><br><br></div>
+  <div class="container">
+  
+  
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6 title"> <center><h1>About us</h1></center></div>
+          <div class="col-sm-3"></div>
+      </div>
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-2 "></div>
+          <div class="col-sm-8 ">
+              <br>
+              <center>
+  		<h2>Where do we come from?</h2><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie mauris id purus tincidunt iaculis. Etiam convallis sodales vehicula. Praesent elementum tristique ligula, quis rutrum arcu congue id. Proin vulputate mattis tristique. Nam tempus felis elementum malesuada posuere. Vivamus maximus molestie lectus nec luctus. Nullam quis semper sem. Suspendisse egestas facilisis ante id volutpat. Integer laoreet sapien neque, at egestas risus eleifend at. Maecenas placerat, arcu non faucibus maximus, arcu diam facilisis elit, in dictum nisl nunc ut dolor. Morbi sit amet bibendum ex, et pellentesque enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</h4><br><br><br>
+  		<h2>What do we do?</h2><h4>Sed vehicula rhoncus gravida. Cras consectetur, neque pharetra pretium blandit, ante massa venenatis magna, in fringilla ante magna ornare enim. Quisque nec nunc nec ante pellentesque eleifend nec eget est. Etiam ut euismod risus, vitae facilisis lectus. Donec massa justo, tempus sed ipsum eget, luctus scelerisque urna. Aliquam fermentum commodo enim sed eleifend. Nam a nulla non magna ultrices ultricies. Nullam sit amet molestie mauris. Vestibulum mattis malesuada consequat. Mauris enim elit, tincidunt eget felis ut, ultricies fringilla est.</h4><br><br><br>
+  		<h2>How can we help you?</h2><h4>Nullam porta bibendum nunc, id pretium sem blandit nec. Integer luctus, lectus id rhoncus pharetra, arcu risus posuere nisl, a consequat quam justo et libero. Praesent id turpis scelerisque tortor tincidunt ultricies. Proin ornare lacinia sem non gravida. Donec facilisis dignissim mauris, eget lobortis lorem imperdiet eu. Sed nec nibh massa. Duis porttitor porta semper. Quisque ac blandit orci. Donec gravida consectetur odio. Morbi eu leo eget nibh egestas tristique. Donec euismod et elit a tincidunt. Vestibulum in iaculis dui. Cras nec nisl leo. Etiam enim sem, volutpat eu vulputate a, elementum faucibus enim. In ut justo nec eros feugiat suscipit. Sed volutpat laoreet placerat.</h4><br><br><br>
+              </center>
+  
+          </div>
+          <div class="col-sm-2 "></div>
+      </div>
+  
+  <br><br><br><br><br><br>
+  </div>
+  </div>
+  </body>
+  </html>
+  
+  
+  
+-- / --
+-- DEFAULT_OUTPUTbuildings.php --
+  <?php
+  include('header.php');
+  ?>
+  
+  
+  <div class="row"><br><br><br><br><br><br><br></div>
+  <div class="container">
+  
+  
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6 title"> <center><h2>Gallery: Buildings</h2></center></div>
+          <div class="col-sm-3"></div>
+      </div>
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-2 "></div>
+          <div class="col-sm-8 ">
+              <br>
+              <center>
+  		<b>Building</b><br><img src="images/building.jpg" alt="Building" width="500" height="600"><br><i> This is a photo of a building.</i><br><br><br>
+  		<b>Tower</b><br><img src="images/tower.jpg" alt="Tower" width="500" height="600"><br><i> This is a photo of a tower.  </i><br><br><br>
+              </center>
+  
+          </div>
+          <div class="col-sm-2 "></div>
+      </div>
+  
+  <br><br><br><br><br><br>
+  </div>
+  </div>
+  </body>
+  </html>
+  
+  
+  
+-- / --
+-- DEFAULT_OUTPUTcontactus.php --
+  
+  <?php
+  include('header.php');
+  ?>
+  
+  <?php
+  $error ="";
+  $success = "";
+  
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      $From = "hellojuliusz.uk";
+      $To = "julek175jgmail.com";
+      $Subject = "Contact form";
+      $Name = Trim(stripslashes($_POST['Name']));
+      $Tel = Trim(stripslashes($_POST['Phone']));
+      $Email = Trim(stripslashes($_POST['Email']));
+      $Message = Trim(stripslashes($_POST['Message']));
+  
+  
+  // prepare email body text
+      $Body = "";
+      $Body .= "New message from : ";
+      $Body .= $Name;
+      $Body .= "\n";
+      $Body .= "Contact no: ";
+      $Body .= $Tel;
+      $Body .= "\n";
+      $Body .= "Email address: ";
+      $Body .= $Email;
+      $Body .= "\n";
+      $Body .= "Message: ";
+      $Body .= $Message;
+      $Body .= "\n";
+  
+      $send = mail($To, $Subject, $Body, "From: <$From>");
+  
+      if ($send) {
+          $success = "Message sent!";
+      } else {
+          $error ="Error sending the e-mail!";
+      }
+  }
+  
+  ?>
+  
+  
+  <div class="row"><br><br><br><br><br><br><br></div>
+  <div class="container">
+  
+  
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6 title"> <center><h1>Send us an e-mail!</h1></center></div>
+          <div class="col-sm-3"></div>
+      </div>
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-4 "></div>
+          <div class="col-sm-4 ">
+              <br>
+              <b><center><font color="red"><?php echo $error ?></font> </b></center>
+              <b><center><font color="green"><?php echo $success ?></font> </center></b>
+  
+  
+  
+  
+              <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                  <div class="form-group">
+                      <label for="TitleLabel">Name</label>
+                      <input type="text" name="Name" class="form-control" value="" placeholder="Provide your name...">
+                  </div>
+                  <div class="form-group">
+                      <label for="TitleLabel">E-mail address</label>
+                      <input type="text" name="Email" class="form-control" value="" placeholder="Provide your e-mail address...">
+                  </div>
+                  <div class="form-group">
+                      <label for="TitleLabel">Phone number</label>
+                      <input type="text" name="Phone" class="form-control" value="" placeholder="Provide your phone number...">
+                  </div>
+                  <div class="form-group">
+                      <label for="DescriptionLabel">Message</label>
+                      <textarea type="text" name="Message" class="form-control" placeholder="Enter your message..." value="" rows="8"></textarea>
+                  </div>
+                  <br>
+                  <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+              </form>
+  
+  
+  
+  
+          </div>
+          <div class="col-sm-4 "></div>
+      </div>
+  
+      <br><br><br><br><br><br>
+  </div>
+  </div>
+  </body>
+  </html>
+  
+  
+  
+  
+  
+-- / --
+-- DEFAULT_OUTPUTfood.php --
+  <?php
+  include('header.php');
+  ?>
+  
+  
+  <div class="row"><br><br><br><br><br><br><br></div>
+  <div class="container">
+  
+  
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6 title"> <center><h2>Gallery: Food</h2></center></div>
+          <div class="col-sm-3"></div>
+      </div>
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-2 "></div>
+          <div class="col-sm-8 ">
+              <br>
+              <center>
+  		<b>sandwich</b><br><img src="images/sandwich" alt="sandwich" width="500" height="600"><br><i> This is a photo of a sandwich.</i><br><br><br>
+  		<b>Banana</b><br><img src="images/banana.jpg" alt="Banana" width="500" height="600"><br><i> This is a photo of a banana</i><br><br><br>
+  		<b>Coffee</b><br><img src="images/coffee.jpg" alt="Coffee" width="500" height="600"><br><i> This is a photo of a cup of coffee</i><br><br><br>
+              </center>
+  
+          </div>
+          <div class="col-sm-2 "></div>
+      </div>
+  
+  <br><br><br><br><br><br>
+  </div>
+  </div>
+  </body>
+  </html>
+  
+  
+  
+-- / --
+-- DEFAULT_OUTPUTheader.php --
+  <!-- Shared header containing the menu bar -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <title>Memorable Photography</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+      <!-- Bootstrap stylesheets and includes -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  
+  </head>
+  
+  <body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="index.php">Memorable Photography</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                  <?php
+                  include('menu.php');
+                  ?>
+  
+              </ul>
+  
+          </div>
+      </div>
+  </nav>
+  </div>
+  
+  <!-- Top spacer -->
+  
+  <div class="row" >
+      <br>
+  
+  </div>
+  
+  <!-- Custom global stylesheets -->
+  <style>
+      .btn-group-xs > .btn, .btn-xs {
+          padding: .45rem .6rem;
+          font-size: 1.25rem;
+          line-height: 1.2;
+          border-radius: .2rem;
+      }
+      body{
+          background-image: url("images/bg.png");
+          overflow-x: hidden;
+      }
+  
+      .container{
+          border-radius: 25px;
+          padding: 20px;
+          background: rgba(240, 240, 240, 0.6);
+      }
+  
+      .title{
+          border-radius: 25px 25px 25px 25px;
+          background: rgba(30,144,255, 0.1);
+      }
+  
+  
+      textarea {
+          overflow-y: scroll;
+          resize: none;
+      }
+  
+  </style>
+  
+  
+-- / --
+-- DEFAULT_OUTPUTindex.php --
+  <?php
+  include('header.php');
+  ?>
+  
+  
+  <div class="row"><br><br><br><br><br><br><br></div>
+  <div class="container">
+  
+  
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6 title"> <center><h1>Welcome!</h1></center></div>
+          <div class="col-sm-3"></div>
+      </div>
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-2 "></div>
+          <div class="col-sm-8 ">
+              <br>
+              <center><h4>
+              Etiam scelerisque magna non sollicitudin consequat. Donec sagittis magna nec egestas ultrices. Etiam interdum tincidunt sapien et sodales. Nam et nibh nec ex porta ornare sed ac ipsum. Sed maximus luctus erat, ut auctor sem scelerisque ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nulla erat, faucibus nec malesuada eu, tristique ut lacus. Maecenas dapibus vulputate orci id interdum. Sed dapibus, leo in finibus condimentum, tortor neque rutrum odio, a sodales ante tortor id purus. Mauris purus erat, rutrum at massa sit amet, blandit egestas erat. Sed egestas magna ipsum, sed imperdiet ligula pharetra in. Donec iaculis risus quis metus condimentum accumsan. Sed porttitor, eros vitae ultricies mattis, quam eros pellentesque quam, nec pulvinar purus nunc ut est. Phasellus interdum at mi pellentesque euismod. Pellentesque et auctor neque. Aliquam non sapien nisi.
+              </h4></center>
+  
+          </div>
+          <div class="col-sm-2 "></div>
+      </div>
+  
+  <br><br><br><br><br><br>
+  </div>
+  </div>
+  </body>
+  </html>
+  
+  
+-- / --
+-- DEFAULT_OUTPUTmenu.php --
+  <li><a href="index.php">Home</a></li>
+  	<li><a href="aboutus.php">AboutUs</a></li>
+  	<li><a href="prices.php">Prices</a></li>
+  	<li><a href="food.php">Food</a></li>
+  	<li><a href="nature.php">Nature</a></li>
+  	<li><a href="buildings.php">Buildings</a></li>
+  	<li><a href="contactus.php">ContactUs</a></li>
+  
+  
+-- / --
+-- DEFAULT_OUTPUTnature.php --
+  <?php
+  include('header.php');
+  ?>
+  
+  
+  <div class="row"><br><br><br><br><br><br><br></div>
+  <div class="container">
+  
+  
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6 title"> <center><h2>Gallery: Nature</h2></center></div>
+          <div class="col-sm-3"></div>
+      </div>
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-2 "></div>
+          <div class="col-sm-8 ">
+              <br>
+              <center>
+  		<b>Flowers</b><br><img src="images/flowers.jpg" alt="Flowers" width="500" height="600"><br><i> This is a photo of flowers</i><br><br><br>
+  		<b>Forest</b><br><img src="images/forest.jpg" alt="Forest" width="500" height="600"><br><i> This is a photo of a forest.</i><br><br><br>
+  		<b>Reindeer</b><br><img src="images/animal.jpg" alt="Reindeer" width="500" height="600"><br><i> This is a photo of a reindeer (I think, that is not my area of expertise!</i><br><br><br>
+              </center>
+  
+          </div>
+          <div class="col-sm-2 "></div>
+      </div>
+  
+  <br><br><br><br><br><br>
+  </div>
+  </div>
+  </body>
+  </html>
+  
+  
+  
+-- / --
+-- DEFAULT_OUTPUTprices.php --
+  <?php
+  include('header.php');
+  ?>
+  
+  
+  <div class="row"><br><br><br><br><br><br><br></div>
+  <div class="container">
+  
+  
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6 title"> <center><h1>Prices</h1></center></div>
+          <div class="col-sm-3"></div>
+      </div>
+  
+  
+      <div class="row" style="display: flex; align-items: center;">
+          <div class="col-sm-2 "></div>
+          <div class="col-sm-8 ">
+              <br>
+              <center>
+  		<h2>Current price list per session in pounds:</h2><h4>
+  		Portrait photography: 120 <br>
+  		Portfolio photography: 100 <br>
+  		Modelling photography: 150 <br>
+  		Lifestyle photography: 110 <br>
+  		Glamour photography: 80 <br>
+  		Product photography: 60 <br>
+  		Architecture photography: 60 <br>
+  		</h4><br><br><br>
+              </center>
+  
+          </div>
+          <div class="col-sm-2 "></div>
+      </div>
+  
+  <br><br><br><br><br><br>
+  </div>
+  </div>
+  </body>
+  </html>
+  
+  
+  
+    -- / --
+    ---
+    
+ */
+
+
+
+
+
+
+
+
+
+BusinessName 'Memorable Photography'
+
+HomePage{ 
+PageHeader 'Welcome to Memorable Photography!'
+Introduction 'Etiam scelerisque magna non sollicitudin consequat. Donec sagittis magna nec egestas ultrices. Etiam interdum tincidunt sapien et sodales. Nam et nibh nec ex porta ornare sed ac ipsum. Sed maximus luctus erat, ut auctor sem scelerisque ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nulla erat, faucibus nec malesuada eu, tristique ut lacus. Maecenas dapibus vulputate orci id interdum. Sed dapibus, leo in finibus condimentum, tortor neque rutrum odio, a sodales ante tortor id purus. Mauris purus erat, rutrum at massa sit amet, blandit egestas erat. Sed egestas magna ipsum, sed imperdiet ligula pharetra in. Donec iaculis risus quis metus condimentum accumsan. Sed porttitor, eros vitae ultricies mattis, quam eros pellentesque quam, nec pulvinar purus nunc ut est. Phasellus interdum at mi pellentesque euismod. Pellentesque et auctor neque. Aliquam non sapien nisi.'
+}
+
+//XPECT warnings --> "Page name declaration should start with a capital" at "aboutUs"
+ContentPage aboutUs{
+	PageHeader'About us'
+	//XPECT warnings --> "Section name declaration should start with a capital" at "section1"
+	Section section1{
+		Title 'Where do we come from?'
+		Content'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie mauris id purus tincidunt iaculis. Etiam convallis sodales vehicula. Praesent elementum tristique ligula, quis rutrum arcu congue id. Proin vulputate mattis tristique. Nam tempus felis elementum malesuada posuere. Vivamus maximus molestie lectus nec luctus. Nullam quis semper sem. Suspendisse egestas facilisis ante id volutpat. Integer laoreet sapien neque, at egestas risus eleifend at. Maecenas placerat, arcu non faucibus maximus, arcu diam facilisis elit, in dictum nisl nunc ut dolor. Morbi sit amet bibendum ex, et pellentesque enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+	}
+	Section Section2{
+		Title 'What do we do?'
+		Content 'Sed vehicula rhoncus gravida. Cras consectetur, neque pharetra pretium blandit, ante massa venenatis magna, in fringilla ante magna ornare enim. Quisque nec nunc nec ante pellentesque eleifend nec eget est. Etiam ut euismod risus, vitae facilisis lectus. Donec massa justo, tempus sed ipsum eget, luctus scelerisque urna. Aliquam fermentum commodo enim sed eleifend. Nam a nulla non magna ultrices ultricies. Nullam sit amet molestie mauris. Vestibulum mattis malesuada consequat. Mauris enim elit, tincidunt eget felis ut, ultricies fringilla est.'
+	}
+	Section Section3{
+		Title 'How can we help you?'
+		Content 'Nullam porta bibendum nunc, id pretium sem blandit nec. Integer luctus, lectus id rhoncus pharetra, arcu risus posuere nisl, a consequat quam justo et libero. Praesent id turpis scelerisque tortor tincidunt ultricies. Proin ornare lacinia sem non gravida. Donec facilisis dignissim mauris, eget lobortis lorem imperdiet eu. Sed nec nibh massa. Duis porttitor porta semper. Quisque ac blandit orci. Donec gravida consectetur odio. Morbi eu leo eget nibh egestas tristique. Donec euismod et elit a tincidunt. Vestibulum in iaculis dui. Cras nec nisl leo. Etiam enim sem, volutpat eu vulputate a, elementum faucibus enim. In ut justo nec eros feugiat suscipit. Sed volutpat laoreet placerat.'
+	}
+}
+	
+	
+ContentPage Prices{
+	PageHeader 'Prices'
+	Section Prices1{
+		Title 'Current price list per session in pounds:'
+		Content '
+Portrait photography: 120 <br>
+Portfolio photography: 100 <br>
+Modelling photography: 150 <br>
+Lifestyle photography: 110 <br>
+Glamour photography: 80 <br>
+Product photography: 60 <br>
+Architecture photography: 60 <br>
+'
+	}
+	}
+	
+
+
+GalleryPage Food{
+	//XPECT warnings --> "Photo name declaration should start with a capital" at "sandwich"
+	Photo sandwich{
+		PhotoDescription 'This is a photo of a sandwich.'
+		//XPECT warnings --> "File name should include extension" at "'sandwich'"
+		PhotoFileName 'sandwich'
+	}
+	
+	Photo Banana{
+		PhotoDescription 'This is a photo of a banana'
+		PhotoFileName 'banana.jpg'
+	}
+	
+	Photo Coffee{
+		PhotoDescription 'This is a photo of a cup of coffee'
+		PhotoFileName 'coffee.jpg'
+	}
+}
+
+GalleryPage Nature{
+	Photo Flowers{
+		PhotoDescription 'This is a photo of flowers'
+		PhotoFileName 'flowers.jpg'
+	}
+	
+	Photo Forest{
+		PhotoDescription 'This is a photo of a forest.'
+		PhotoFileName 'forest.jpg'
+	}
+	
+	Photo Reindeer{
+		PhotoDescription 'This is a photo of a reindeer (I think, that is not my area of expertise!'
+		PhotoFileName 'animal.jpg'
+	}
+}
+
+GalleryPage Buildings{
+	Photo Building{
+		PhotoDescription 'This is a photo of a building.'
+		PhotoFileName 'building.jpg'
+	}
+	
+	Photo Tower{
+		PhotoDescription 'This is a photo of a tower.  '
+		PhotoFileName 'tower.jpg'
+	}
+	
+}
+
+ContactPage ContactUs{
+	PageHeader 'Send us an e-mail!'
+	//XPECT warnings --> "Send from address should contain a valid e-mail address" at "'hellojuliusz.uk'"
+	SendFrom 'hellojuliusz.uk'
+	//XPECT warnings --> "Send to address should contain a valid e-mail address" at "'julek175jgmail.com'"
+	SendTo 'julek175jgmail.com'
+	}
+	
+
